@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Gunarekha & Tinagaran | 13.12.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= OPENING OVERLAY ================= -->
+<div id="opening" class="kolam-bg">
+  <div class="opening-card">
+    <div class="opening-inner">
+      <svg class="opening-garland" viewBox="0 0 280 100" fill="none">
+        <!-- hanging garland strands -->
+        <path d="M20 0 Q20 30 14 45 Q8 60 16 78" stroke="#4C6B4E" stroke-width="2" fill="none"/>
+        <path d="M60 0 Q58 24 50 38 Q42 52 48 66" stroke="#4C6B4E" stroke-width="2" fill="none"/>
+        <path d="M220 0 Q220 24 228 38 Q236 52 230 66" stroke="#4C6B4E" stroke-width="2" fill="none"/>
+        <path d="M260 0 Q260 30 266 45 Q272 60 264 78" stroke="#4C6B4E" stroke-width="2" fill="none"/>
+        <g fill="#B89A5A"><circle cx="16" cy="20" r="2.2"/><circle cx="14" cy="34" r="2.2"/><circle cx="17" cy="50" r="2.2"/><circle cx="50" cy="16" r="2.2"/><circle cx="47" cy="30" r="2.2"/><circle cx="49" cy="46" r="2.2"/><circle cx="230" cy="16" r="2.2"/><circle cx="233" cy="30" r="2.2"/><circle cx="229" cy="46" r="2.2"/><circle cx="264" cy="20" r="2.2"/><circle cx="266" cy="34" r="2.2"/><circle cx="262" cy="50" r="2.2"/></g>
+        <g fill="#7A2635"><circle cx="16" cy="60" r="4"/><circle cx="48" cy="58" r="4"/><circle cx="230" cy="58" r="4"/><circle cx="264" cy="60" r="4"/></g>
+        <!-- kuthuvilakku lamps -->
+        <g transform="translate(4,72)" stroke="#B89A5A" stroke-width="1.3" fill="none">
+          <path d="M12 0 V8 M5 8 H19 M8 8 L12 15 L16 8 M12 15 V24 M2 24 H22 L18 30 H6 Z"/>
+        </g>
+        <g transform="translate(252,72)" stroke="#B89A5A" stroke-width="1.3" fill="none">
+          <path d="M12 0 V8 M5 8 H19 M8 8 L12 15 L16 8 M12 15 V24 M2 24 H22 L18 30 H6 Z"/>
+        </g>
+        <!-- central top ornament -->
+        <path d="M130 6 Q140 -4 150 6 Q140 4 130 6Z" fill="#B89A5A"/>
+        <circle cx="140" cy="4" r="2.4" fill="#7A2635"/>
+      </svg>
+
+      <div class="opening-monogram"><span class="m-div"></span>கு &nbsp;|&nbsp; தி<span class="m-div"></span></div>
+      <p class="blessing">Together with their families</p>
+
+      <p class="invite-line">Cordially invite you to celebrate<br>the wedding of</p>
+
+      <h1 class="opening-names">குணரேகா<span class="opening-amp">&amp;</span>தினகரன்</h1>
+
+      <p class="opening-date">13 &nbsp;•&nbsp; 12 &nbsp;•&nbsp; 2026</p>
+      <div class="opening-divider"><span class="od-line"></span><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0 L9 5 L14 7 L9 9 L7 14 L5 9 L0 7 L5 5 Z" fill="#B89A5A"/></svg><span class="od-line"></span></div>
+
+      <div class="envelope-wrap">
+        <div class="envelope-body"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 3 C9 8 9 12 12 21 C15 12 15 8 12 3 Z"/></svg>
+        </div>
+      </div>
+
+      <button class="open-btn" id="openBtn">Open Invitation</button>
+    </div>
+  </div>
+</div>
+
+<button id="music-toggle" aria-label="Toggle music">
+  <svg id="musicIconOn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 18V6l11-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+</button>
+<audio id="bgm" loop preload="none"></audio>
+
+<!-- ================= MAIN SITE ================= -->
+<div id="site">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-frame"></div>
+    <p class="hero-eyebrow reveal in">The Beginning of Forever</p>
+    <h1 class="hero-names reveal in reveal-delay-1">Gunarekha Raman<span class="hero-amp">&amp;</span>Tinagaran Ravi Shankar</h1>
+    <p class="hero-line reveal in reveal-delay-2">Together with our families, we invite you to celebrate our special day.</p>
+    <div class="hero-meta reveal in reveal-delay-3">
+      <span class="day">Sunday</span>
+      <span class="date">13 December 2026</span>
+      <span class="venue">SJK(C) Masjid Tanah &nbsp;•&nbsp; Melaka</span>
+    </div>
+    <div class="countdown reveal in reveal-delay-3">
+      <div class="cd-box"><div class="cd-num" id="cd-days">00</div><div class="cd-label">Days</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-box"><div class="cd-num" id="cd-hours">00</div><div class="cd-label">Hours</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-box"><div class="cd-num" id="cd-mins">00</div><div class="cd-label">Minutes</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-box"><div class="cd-num" id="cd-secs">00</div><div class="cd-label">Seconds</div></div>
+    </div>
+    <div class="scroll-cue"><div class="stick"></div></div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" class="section-pad">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2 class="section-title">Two Hearts, One Journey</h2>
+      <p class="section-sub">Two hearts, one beautiful journey.</p>
+    </div>
+    <div class="section-inner">
+      <div class="timeline">
+        <div class="t-item reveal"><div class="t-dot"></div><div class="t-year">2019</div><div class="t-title serif">We first met</div><p class="t-desc">A chance introduction through mutual friends — the start of something neither of us expected.</p></div>
+        <div class="t-item reveal"><div class="t-dot"></div><div class="t-year">2020</div><div class="t-title serif">Our story began</div><p class="t-desc">Long conversations turned into something deeper, and we knew we had found each other.</p></div>
+        <div class="t-item reveal"><div class="t-dot"></div><div class="t-year">2022</div><div class="t-title serif">A new chapter</div><p class="t-desc">Through every season, we built a friendship and love that only grew stronger with time.</p></div>
+        <div class="t-item reveal"><div class="t-dot"></div><div class="t-year">2025</div><div class="t-title serif">The proposal</div><p class="t-desc">Surrounded by the people we love, the promise of forever was finally sealed.</p></div>
+        <div class="t-item reveal"><div class="t-dot"></div><div class="t-year">2026</div><div class="t-title serif">The day we say "I do"</div><p class="t-desc">Join us as we begin our forever, blessed by our families and all who we hold dear.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CELEBRATIONS -->
+  <section id="celebrations" class="section-pad">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">The Celebration</p>
+      <h2 class="section-title">Every Beautiful Moment</h2>
+      <p class="section-sub">Come celebrate every beautiful moment with us.</p>
+    </div>
+    <div class="section-inner">
+      <div class="events-grid">
+        <div class="event-card reveal">
+          <div class="event-num">Event 01</div>
+          <svg class="event-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 34 V18 L20 6 L32 18 V34 M8 34 H32 M14 34 V24 H26 V34"/></svg>
+          <div class="event-name serif">Wedding Ceremony</div>
+          <div class="event-meta">13 DECEMBER 2026<br>9:00 AM<br>SJK(C) Masjid Tanah, Melaka</div>
+        </div>
+        <div class="event-card reveal reveal-delay-1">
+          <div class="event-num">Event 02</div>
+          <svg class="event-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="14" r="5"/><path d="M20 19 V30 M13 30 H27 M13 26 H27"/></svg>
+          <div class="event-name serif">Dinner</div>
+          <div class="event-meta">19 DECEMBER 2026<br>7:00 PM<br>Nibong Tebal, Penang</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section-pad">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">Together</p>
+      <h2 class="section-title">A Few Moments Before The Big One</h2>
+    </div>
+    <div class="section-inner">
+      <div class="gallery-wrap" id="galleryGrid">
+        <div class="g-item big reveal" data-i="0"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3c-3 5-3 9 0 18C15 12 15 8 12 3Z"/></svg></div><img class="g-photo" src="images/photo1.jpg" alt="Guna and Tina, photo 1" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item tall reveal" data-i="1"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 4a8 8 0 100 16 8 8 0 000-16Z"/></svg></div><img class="g-photo" src="images/photo2.jpg" alt="Guna and Tina, photo 2" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item small reveal" data-i="2"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 18 L12 4 L20 18 Z"/></svg></div><img class="g-photo" src="images/photo3.jpg" alt="Guna and Tina, photo 3" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item small reveal" data-i="3"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3c-3 5-3 9 0 18C15 12 15 8 12 3Z"/></svg></div><img class="g-photo" src="images/photo4.jpg" alt="Guna and Tina, photo 4" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item wide reveal" data-i="4"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 4a8 8 0 100 16 8 8 0 000-16Z"/></svg></div><img class="g-photo" src="images/photo5.jpg" alt="Guna and Tina, photo 5" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item small reveal" data-i="5"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 18 L12 4 L20 18 Z"/></svg></div><img class="g-photo" src="images/photo6.jpg" alt="Guna and Tina, photo 6" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item small reveal" data-i="6"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3c-3 5-3 9 0 18C15 12 15 8 12 3Z"/></svg></div><img class="g-photo" src="images/photo7.jpg" alt="Guna and Tina, photo 7" loading="lazy" onerror="this.remove()"></div>
+        <div class="g-item small reveal" data-i="7"><div class="g-fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 4a8 8 0 100 16 8 8 0 000-16Z"/></svg></div><img class="g-photo" src="images/photo8.jpg" alt="Guna and Tina, photo 8" loading="lazy" onerror="this.remove()"></div>
+      </div>
+      <p class="gallery-note">Tap any photo to view it larger.</p>
+    </div>
+  </section>
+
+  <div id="lightbox">
+    <div class="lb-inner">
+      <div class="lb-fill" id="lbFill" style="background:linear-gradient(140deg,#f1e6cf,#e5d3ad); display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8C7038" stroke-width="1" style="width:70px;height:70px;opacity:.5;"><path d="M12 3c-3 5-3 9 0 18C15 12 15 8 12 3Z"/></svg>
+      </div>
+    </div>
+    <button class="lb-close" id="lbClose">✕</button>
+    <button class="lb-nav prev" id="lbPrev">‹</button>
+    <button class="lb-nav next" id="lbNext">›</button>
+  </div>
+
+  <!-- DRESS CODE -->
+  <section id="dresscode" class="section-pad" style="background:var(--ivory-deep)">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">What To Wear</p>
+      <h2 class="section-title">Dress To Celebrate</h2>
+    </div>
+    <div class="section-inner">
+      <div class="dress-grid">
+        <div class="dress-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 3 L4 8 L8 11 M16 3 L20 8 L16 11 M8 3 Q12 6 16 3 L16 21 H8 Z"/></svg><div class="d-name serif">Wedding</div><div class="d-tone">Traditional / Elegant</div></div>
+        <div class="dress-card reveal reveal-delay-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 3 L4 8 L8 11 M16 3 L20 8 L16 11 M8 3 Q12 6 16 3 L16 21 H8 Z"/></svg><div class="d-name serif">Reception</div><div class="d-tone">Formal / Indian Festive</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section id="venue" class="section-pad">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">The Location</p>
+      <h2 class="section-title">Where We Celebrate</h2>
+    </div>
+    <div class="section-inner">
+      <div class="venue-grid">
+        <div class="venue-card reveal">
+          <iframe class="venue-map" loading="lazy" src="https://www.google.com/maps?q=SJK(C)+Masjid+Tanah,+Masjid+Tanah,+Melaka,+Malaysia&output=embed"></iframe>
+          <div class="venue-info">
+            <div class="v-tag">Wedding Ceremony</div>
+            <div class="v-name serif">SJK(C) Masjid Tanah</div>
+            <div class="v-loc">Masjid Tanah, Melaka, Malaysia</div>
+            <div class="v-date">13 DECEMBER 2026</div>
+            <a class="btn-primary" href="https://maps.app.goo.gl/fBm4dPPNmptnty347" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-1">
+          <iframe class="venue-map" loading="lazy" src="https://www.google.com/maps?q=Nibong+Tebal,+Penang,+Malaysia&output=embed"></iframe>
+          <div class="venue-info">
+            <div class="v-tag">Dinner</div>
+            <div class="v-name serif">Nibong Tebal</div>
+            <div class="v-loc">Nibong Tebal, Penang, Malaysia</div>
+            <div class="v-date">19 DECEMBER 2026</div>
+            <a class="btn-primary" href="https://www.google.com/maps/search/?api=1&query=Nibong+Tebal,+Penang,+Malaysia" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section-pad kolam-bg">
+    <div class="section-inner center reveal">
+      <p class="eyebrow">Join Us</p>
+      <h2 class="section-title" style="color:#fff">We Would Love To Have You</h2>
+      <p class="section-sub">Your presence would make our celebration even more special.</p>
+    </div>
+
+    <div class="rsvp-card reveal" id="rsvpCard">
+      <div class="progress-dots" id="progressDots">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <form id="rsvpForm">
+        <!-- Step 1: Name -->
+        <div class="rsvp-step active" data-step="1">
+          <p class="rsvp-label">Your Name</p>
+          <input class="rsvp-input" type="text" id="guestName" placeholder="Full name" required>
+          <div class="rsvp-nav" style="justify-content:flex-end;">
+            <button type="button" class="rsvp-next" id="next1">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Attending -->
+        <div class="rsvp-step" data-step="2">
+          <p class="rsvp-label">Will You Be Joining Us?</p>
+          <div class="choice-row">
+            <button type="button" class="choice-btn" data-val="yes" id="attendYes">Yes, I'll be there</button>
+            <button type="button" class="choice-btn" data-val="no" id="attendNo">Sorry, I can't make it</button>
+          </div>
+          <div class="rsvp-nav">
+            <span class="rsvp-back" data-back="1">Back</span>
+          </div>
+        </div>
+
+        <!-- Step 3: Guests -->
+        <div class="rsvp-step" data-step="3">
+          <p class="rsvp-label">Number of Guests</p>
+          <div class="stepper-row">
+            <button type="button" class="stepper-btn" id="guestMinus">−</button>
+            <span id="guestCount">1</span>
+            <button type="button" class="stepper-btn" id="guestPlus">+</button>
+          </div>
+          <div class="rsvp-nav">
+            <span class="rsvp-back" data-back="2">Back</span>
+            <button type="button" class="rsvp-next" data-next="4">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Events -->
+        <div class="rsvp-step" data-step="4">
+          <p class="rsvp-label">Which Celebrations Will You Attend?</p>
+          <div class="check-row" id="eventChecks">
+            <label class="check-item" data-event="Wedding"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12l5 5L20 6"/></svg></span>Wedding Ceremony</label>
+            <label class="check-item" data-event="Dinner"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12l5 5L20 6"/></svg></span>Dinner</label>
+          </div>
+          <div class="rsvp-nav">
+            <span class="rsvp-back" data-back="3">Back</span>
+            <button type="button" class="rsvp-next" data-next="5">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Food + message -->
+        <div class="rsvp-step" data-step="5">
+          <p class="rsvp-label">Food Preference</p>
+          <div class="radio-row" id="foodRadios" style="margin-bottom:24px;">
+            <label class="radio-item" data-food="Vegetarian"><span class="radio-dot"></span>Vegetarian</label>
+            <label class="radio-item" data-food="Non-Vegetarian"><span class="radio-dot"></span>Non-Vegetarian</label>
+            <label class="radio-item" data-food="Halal"><span class="radio-dot"></span>Halal</label>
+          </div>
+          <p class="rsvp-label">Message For The Couple</p>
+          <textarea class="rsvp-input" id="guestMessage" placeholder="Leave a wish for the couple (optional)"></textarea>
+          <div class="rsvp-nav">
+            <span class="rsvp-back" data-back="4">Back</span>
+            <button type="submit" class="rsvp-submit">Confirm RSVP</button>
+          </div>
+        </div>
+
+        <!-- Confirmation -->
+        <div class="rsvp-step" data-step="confirm">
+          <div class="rsvp-confirm" id="confirmContent"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section id="footer">
+    <p class="f-msg">"Until then, keep us in your prayers and save the date."</p>
+    <div class="f-names serif">Gunarekha Raman<span class="f-amp">&amp;</span>Tinagaran Ravi Shankar</div>
+    <p class="f-date">13 &nbsp;•&nbsp; 12 &nbsp;•&nbsp; 2026</p>
+    <p class="f-venue">SJK(C) Masjid Tanah, Melaka</p>
+    <p class="f-love">With love, our families</p>
+    <p class="f-hash">#GunaWedsTina2026</p>
+    <a class="f-admin" href="#admin" id="adminLink">RSVP Dashboard →</a>
+  </section>
+</div>
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+<div id="admin">
+  <div class="admin-head">
+    <div>
+      <p class="eyebrow">Admin</p>
+      <h2 class="serif">RSVP Dashboard</h2>
+    </div>
+    <a class="admin-back" href="#hero" id="adminBack">← Back to invitation</a>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="s-num" id="statTotal">0</div><div class="s-label">Total Responses</div></div>
+    <div class="stat-card"><div class="s-num" id="statConfirmed">0</div><div class="s-label">Confirmed</div></div>
+    <div class="stat-card"><div class="s-num" id="statDeclined">0</div><div class="s-label">Declined</div></div>
+    <div class="stat-card"><div class="s-num" id="statGuests">0</div><div class="s-label">Total Attending Guests</div></div>
+  </div>
+
+  <div class="admin-section">
+    <h3>Attending By Event</h3>
+    <div class="breakdown-grid" id="eventBreakdown"></div>
+  </div>
+
+  <div class="admin-section">
+    <h3>Food Preferences</h3>
+    <div class="breakdown-grid" id="foodBreakdown"></div>
+  </div>
+
+  <div class="admin-section">
+    <h3>Guest List</h3>
+    <div class="admin-toolbar">
+      <input type="text" id="searchGuest" placeholder="Search by name…">
+      <div style="display:flex;gap:10px;align-items:center;">
+        <select id="filterStatus">
+          <option value="all">All</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="declined">Declined</option>
+        </select>
+        <button class="export-btn" id="exportBtn">Export CSV</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="guest-table">
+        <thead>
+          <tr><th>Name</th><th>Guests</th><th>Events</th><th>RSVP</th><th>Food</th><th>Message</th><th>Submitted</th></tr>
+        </thead>
+        <tbody id="guestTableBody"></tbody>
+      </table>
+      <div class="admin-empty" id="adminEmpty" style="display:none;">No RSVPs yet — responses will appear here as guests reply.</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
